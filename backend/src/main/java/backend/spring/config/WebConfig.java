@@ -13,7 +13,7 @@ public class WebConfig {  //백엔드의 CORS설정
         return new WebMvcConfigurer() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**")  // 모든 경로에 대해 CORS 허용
+                registry.addMapping("/**")  // 백엔드의 모든 api에 대해 cors 허용
                         .allowedOrigins("http://localhost")  //백엔드로 오는 요청을 허용할 브라우저의 origin(프로토콜, 호스트, 포트만 명시)
                         .allowedMethods("GET", "POST", "PUT", "DELETE")  // 허용할 HTTP 메서드
                         .allowedHeaders("*");  // 허용할 헤더
